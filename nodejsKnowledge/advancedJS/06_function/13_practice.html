@@ -1,0 +1,81 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // No.1
+        var a = 1
+        function fn() {
+            a = 2
+            console.log("afn : ", a) 
+        }
+
+        fn() // 2
+
+        console.log("a: ", a) // 2
+
+        // No.2
+        // 变量的提升同样适用于函数作用域
+        var b = 3
+        function fn1() {
+            console.log("b1fn: ",b)
+            var b = 4
+            console.log("bfn: ", b) 
+        }
+
+        fn1() // undefined 4
+
+        console.log("b: ", b) // 3
+
+        //No.3
+        // 定义形参相当于在函数中声明了对应的变量但是没有赋值
+        var c = 5
+        function fn2(c) {
+            console.log("c1fn: ",c)
+            var c = 6
+            console.log("cfn: ", c) 
+        }
+
+        fn2() // undefined 6
+
+        console.log("c: ", c) // 5
+
+        //No.4
+
+        var d = 7
+        function fn3(d) {
+            console.log("d1fn: ",d)
+            d = 8
+            console.log("dfn: ", d) 
+        }
+
+        fn3(d) // 7 8 
+
+        console.log("d: ", d) // 7
+
+        //No.5
+        console.log(e) // alert(10)
+        var e = 9
+        console.log(e) // 9
+        function e() {
+            alert(10)
+        }
+        console.log(e) // 9
+        var e = 11
+        console.log(e) // 11
+        var e = function() {
+            alert(12)
+        }
+        console.log(e) // aler(12)
+        var e
+        console.log(e) // aler(12)
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

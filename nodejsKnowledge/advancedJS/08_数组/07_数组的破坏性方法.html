@@ -1,0 +1,53 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /* 
+            push()
+                - 向数组的末尾添加一个或者多个元素，并返回数组的长度
+            pop()
+                - 删除最后一个元素并返回该元素
+            unshift()
+                - 向数组的开头添加一个或者多个元素，并返回数组的长度
+            shift()
+                - 删除第一个元素并返回该元素
+            splice()
+                - 可以删除，添加，插入，替换数组中的元素
+                参数
+                1.删除的起始位置
+                2.删除的个数
+                3.要插入的元素
+                返回值：
+                删除的元素
+
+            reverser()
+                - 反转数组
+        */
+
+        let arr = ["sunwukong", "tangseng", "bajie"]
+        let res1 = arr.push("liuer", "shaseng")
+        console.log(arr)
+        console.log(res1)
+        let res2 = arr.pop()
+        console.log(arr)
+        console.log(res2)
+        let res3 = arr.unshift("niumowang")
+        console.log(arr)
+        console.log(res3)
+        let res4 = arr.shift()
+        console.log(arr)
+        console.log(res4)
+
+        arr = ["sunwukong", "tangseng", "bajie", "liuer"]
+        let res5 = arr.splice(0,2,"honghaier", "tieshan", "niumowang")
+        console.log(arr)
+        console.log(res5)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

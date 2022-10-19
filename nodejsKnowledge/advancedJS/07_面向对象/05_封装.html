@@ -1,0 +1,93 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /* 
+            面向对象的特点
+                封装，继承，多态
+
+            1.封装
+                - 对象就是一个存储不同属性的容器
+                - 对象不仅负责存储属性，还有数据的安全
+                - 直接添加在对象中的属性并不安全，因为他们可以被任意的修改
+                - 如何确保数据的安全
+                    1.私有化数据
+                        1）将我们需要保护的属性设置为私有，只能在类内部使用
+                    2.提供getter&setter方法开放我们对数据的操作
+                        - 优势
+                            1）可以控制属性的读写权限
+                            2）可以在方法中对属性的值进行验证
+
+            封装主要用来保证数据的安全
+            实现封装的方法
+            1）属性的私有化 -》加#
+            2）通过setter getter方法来操作属性
+            set 属性名(参数) {
+                this.#属性 = 参数
+            }
+            get 属性名() {
+                return this.#属性
+            }
+        */
+
+        class Person {
+
+            #address = "huaguoshan" //实例使用#开头就变成了私有属性
+                                    // 私有属性只能在类内部访问
+            //私有属性必须先声明
+            #name
+            #age
+            #gender
+            constructor(name, age, gender) {
+                this.#name = name
+                this.#age = age
+                this.#gender = gender
+            }
+            sayHello() {
+                console.log('this.name--->', this.name)
+                // return 1
+            }
+            //getter方法用来读取数据
+            getName() {
+                return this.#name
+            }
+            //setter方法用来修改数据
+            setName(name) {
+                this.#name = name
+            }
+
+            get age() {
+                return this.#age
+            }
+
+            set age(age) {
+                if(isNaN(age)) {
+                    console.log("Re enter")
+                } else if(age <= 0) {
+                    console.log("Should be positive")
+                } else {
+                    this.#age = age
+                }
+            }
+
+            get gender() {
+                return this.#gender
+            }
+
+            set gender(gender) {
+                this.#gender = gender
+            }
+
+        }
+
+        const p1 = new Person("sunwukong",19, "male")
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

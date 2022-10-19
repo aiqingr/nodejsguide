@@ -1,0 +1,58 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let obj = Object();
+        /* 
+            属性名：
+                1）通常属性名就是一个字符串，所以属性名可以是任何值，没有什么特殊要求
+                    但是如果你的属性名太特殊，不能直接使用，需要使用[]来设置
+                    虽然如此，但是还是强烈建议属性名也还是按照标识符的规范命名
+                2）也可以使用符号（Symbol）作为属性名，来添加属性
+                    获取这种属性的时候，也必须使用symbol
+                    使用Symbol添加的属性，通常是那些不希望被外界访问的属性
+                3) 使用[]去操作属性时，可以使用变量
+
+            属性值：
+                1）对象的数据可以是任意数据类型，也可以是一个对象
+
+            使用typeof检查对象返回object
+        */
+        obj.name = "sunwukong"
+        let mySymbol = Symbol();
+        let newSymbol = Symbol();
+
+        obj[mySymbol] = "Property created from symbol"
+
+        console.log(obj[mySymbol])
+        console.log(obj[newSymbol])
+
+        let obj2 = new Object();
+
+        obj2.name = "zhubajie"
+
+        let str = "address"
+
+        obj2[str] = "earth"
+
+        console.log(`Method1: ${obj2.name}, method2 ${obj2["name"]}`)
+
+        /* 
+            in 运算符
+                用来检查对象中是否含有某个属性
+                语法： 属性名 in obj
+                如果有返回true，没有返回false
+        */
+        console.log("name" in obj2)
+
+        console.log(str in obj2)
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

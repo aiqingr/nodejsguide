@@ -1,0 +1,52 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /* 
+            
+        */
+
+        class Animal {
+
+        }
+
+        class Dog extends Animal {
+            name = "wangdog"
+            sayHello() {
+                console.log(this.name)
+            }
+        }
+
+        class Cat extends Animal {
+
+        }
+        // instanceof 检查一个对象是否是一个类的实例
+        // instanceof检查的是对象的原型链上是否有该类的实例
+        // 只要原型链上有该类实例就返回true
+        const d1 = new Dog()
+        const c1 = new Cat()
+        // d1 -> Animal实例 -> Object -> Object原型 -> null
+        console.log(d1 instanceof Dog) // true
+        console.log(d1 instanceof Animal) // true
+
+        /* 
+            in
+                -使用in运算符检查属性的时候，无论属性在对象中还是原型中都返回true
+            对象.hasOwnProperty(属性名) （不推荐使用）
+                -用来检查一个对象自身是否含有某个属性
+            Object.hasOwn(实例, 属性名)
+                -用来检查一个对象自身是否含有某个属性
+        */
+        console.log("@@@@")
+        console.log("sayHello" in d1)
+        console.log(d1.hasOwnProperty("sayHello"))
+        console.log(Object.hasOwn(d1, "name"))
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

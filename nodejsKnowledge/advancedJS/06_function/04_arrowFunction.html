@@ -1,0 +1,31 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /* 
+            当箭头函数只有一个参数的时候可以省略（）
+        */
+
+        const fn1 = a => {
+            console.log(a)
+        }
+
+        //定义参数时，可以为参数指定默认值
+        //默认值会在没有相应对的实参时生效
+
+        const fn2 = (a=10,b=20,c=30) => {
+            console.log('a= ', a)
+            console.log('b= ', b)
+            console.log('c= ', c)
+        }
+
+        fn2(1,2)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

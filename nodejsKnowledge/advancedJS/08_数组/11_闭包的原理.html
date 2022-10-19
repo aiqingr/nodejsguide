@@ -1,0 +1,53 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /* 
+            函数的作用域，在函数创建时就已经确定了
+            和调用的位置无关
+        */
+        let a = "globalVar"
+        function fn() {
+            console.log(a)
+        }
+        function fn2() {
+            let a = "fn2Vara"
+            console.log(a)
+            fn()
+        }
+
+        function fn3() {
+            let a = "fn3Vara"
+            function fn4() {
+                console.log(a)
+            }
+            fn4()
+        }
+        /* 
+            函数的作用域，在函数创建时就已经确定了 词法作用域
+            和调用的位置无关
+            闭包就是利用词法作用域
+        */
+        function fn5() {
+            let a = "fn5Vara"
+            function fn6() {
+                console.log(a)
+            }
+            return fn6
+        }
+
+        let fn7 = fn5()
+        fn7()
+
+        fn()
+        fn2()
+        fn3()
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

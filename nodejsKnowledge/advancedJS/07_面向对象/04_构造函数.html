@@ -1,0 +1,43 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        class Person {
+            name = "sunwukong" // 当我们在类中，直接指定实例属性的值时
+            // 意味着我们所有创建的属性都是这个值
+            age = 18
+            gender = "male"
+
+            sayHello() {
+                console.log(this.name)
+            }
+        }
+
+        const p1 = new Person()
+        const p2 = new Person()
+        const p3 = new Person()
+
+        class God {
+            //在类中我们可以添加一个特殊的方法 constructor
+            //该方法我们称之为构造函数（构造方法）
+            constructor(name, age, gender) {
+                // 可以在构造函数中为实例属性进行赋值
+                //在构造函数中，this表示当前创建的实例对象
+                // 把参数中name的值传递给当前创建的实例对象的name属性
+                this.name = name //
+                this.age = age
+                this.gender = gender
+            }
+        }
+
+        const god1 = new God("sunwukong", 18, "male")
+        const god2 = new God("zhubajie", 28, "male")
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

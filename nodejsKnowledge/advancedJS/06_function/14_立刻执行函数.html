@@ -1,0 +1,37 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /* 
+            在开发中尽量减少直接在全局作用域中编写代码
+
+            所以我们的代码要尽量编写局部作用域
+
+            如果使用let声明变量可以使用{}来创建块作用域
+        */
+        var a = 10
+        var a = 12
+        console.log(a);
+        /* 
+            立即执行函数（IIFE）
+                1）是一个匿名函数，并且他只会调用一次
+                2）可以利用IIFE来创造一个一次性的函数作用域避免变量冲突的问题
+        */
+        (function(){
+            let a = 10
+            console.log(a)
+        })();
+
+        (function(){
+            let a = 11
+            console.log(a)
+        }())
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

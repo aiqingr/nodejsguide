@@ -1,0 +1,41 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        /* 
+            对象中存储属性的区域有两个
+            1.对象自身
+                -直接通过对象添加的属性，位于对象自身
+                - 在类中通过x = y 的形式添加的属性，也位于对象自身中
+            2.原型对象prototype
+                - 对象中还有一些其他东西存储在原型对象中
+                - 在对象中有一个属性用来存储原型对象，这个属性叫做__proto__
+                - 原型对象也负责为对象存储属性，
+                    1.当我们访问对象中的属性时，他会优先访问对象自身的属性
+                    2.如果对象自身不包括该属性时，才会去原型对象中找
+                -会添加到原型对象的情况
+                    1.在类中使用XXX(){}的方式添加的方法，位于原型中
+                    2.主动在原型中添加的方法
+
+        */
+        class Person {
+            name="sunwukong"
+            sayHello1() {
+                console.log("sayHello1")
+            }
+            sayHello2 = () => {
+                console.log("sayHello2")
+            }
+        }
+
+        const p1 = new Person()
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

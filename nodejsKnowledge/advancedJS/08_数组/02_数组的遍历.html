@@ -1,0 +1,47 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /* 
+            任何类型都可以成为数组中的元素
+            创建数组的时候，要尽量确保数组中的元素的数据类型是一致的
+        */
+
+        let arr = [1,2,3,4,5]
+
+        for(let i=0; i<arr.length; i++) {
+            console.log(arr[i])
+        }
+
+        for(let i = arr.length - 1; i>=0; i--) {
+            console.log(arr[i])
+        }
+
+        class Person {
+            constructor(name, age) {
+                this.name = name
+                this.age = age
+            }
+        }
+
+        const newArr = [
+            new Person("sun", 18),
+            new Person("sha", 28),
+            new Person("zhu", 38),
+            new Person("hong", 9)
+        ]
+
+        for(let i=0; i < newArr.length; i++) {
+            if(newArr[i].age < 18) {
+                console.log(newArr[i].name)
+            }
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

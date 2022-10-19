@@ -1,0 +1,42 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /* 
+            所有同类型的对象的原型对象都是一样的
+            也就意味着同类型对象的原型链是一样的
+
+            原型链的作用：
+                原型链就相当于一个公共区域，可以被所有该类实例访问
+                可以将一个该类实例中，所有的公共属性方法统一存储在原型中
+                这样我们就只要创建一个属性，就可以被所有实例访问
+            JS中的继承就是通过原型来实现的
+            当我们继承的时候 子类就是父类的一个实例
+            在对象中，有些值是对象独有的，像是属性（name age）每个对象都应该有自己的值
+            但有一些值对于每一个对象都是一样的，像是各种方法，没有必要重复创建
+        */
+
+        class Person {
+
+            constructor(name) {
+                this.name = name
+            }
+            sayHello() {
+                console.log(this.name)
+            }
+        }
+
+        const p1 = new Person("sunwukong")
+        const p2 = new Person("zhubajie")
+        console.log(p1.__proto__ === p2.__proto__)
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

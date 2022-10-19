@@ -1,0 +1,47 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /* 
+            访问一个对象的原型对象
+                对象.__proto__
+                Object.getPrototypeOf(对象)
+
+            原型对象中的数据
+                1.对象中的数据（属性方法）
+                2.constructor对象的构造函数
+
+            原型对象也有原型，就构成了原型链
+            根据复杂程度不同，原型链的长度也不同
+            p1对象的原型链：p1对象 -> 原型 -> 原型 -> null
+            原型链
+            读取对象属性时，会优先对象的自身属性
+                1.如果对象中没有，则去对象的原型中找
+                2.如果对象的原型中没有，则去原型的原型中找
+                3.指导找到Object对象的原型，Object的原型没有原型（为null）
+
+            作用域链，是找变量的链，如果都找不到，报错
+            原型链，是找对象属性的链，如果都找不到，则返回undefined
+
+        */
+
+        class Person {
+            name = "sunwukong"
+            sayHello() {
+                console.log(this)
+            }
+        }
+
+        const p1 = new Person();
+        console.log(p1.__proto__)
+        console.log(Object.getPrototypeOf(p1))
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

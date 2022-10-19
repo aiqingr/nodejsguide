@@ -1,0 +1,57 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function fn(a) {
+            a.name = "liuer" //修改对象时，如果有其他变量指向该对象则所有指向该对象的变量都会受到影响
+            console.log(a.name)
+            console.log('a: ', a)
+        }
+
+        let obj = {name: "sunwukong"}
+
+        fn(obj)
+
+        console.log('obj: ', obj)
+
+        function fn1(a) {
+            a = {} // 修改变量时，只会影响当前变量
+            a.name = "shaseng" //修改对象时，如果有其他变量指向该对象则所有指向该对象的变量都会受到影响
+            console.log(a.name)
+            console.log('a: ', a)
+        }
+
+        let obj1 = {name: "shawujing"}
+
+        fn1(obj1)
+
+        console.log('obj1: ', obj1)
+        
+        const fn3 = (a={name: "唐僧"}) => {
+            console.log(a)
+            a.name = "悟空"
+            console.log(a)
+        }
+        //函数每次调用都会重新创建默认值
+        fn3() // 唐僧 => 悟空
+        fn3() // 唐僧 => 悟空(yes) or 悟空 => 悟空(no)
+
+        console.log("------------------")
+        let obj2 = {name: "唐僧"}
+        const fn4 = (a = obj2) => {
+            console.log(a)
+            a.name = "六耳"
+            console.log(a)
+        }
+
+        fn4() // 唐僧 => 六耳
+        fn4() // 唐僧 => 六耳(yes) or 六耳 => 六耳(no)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

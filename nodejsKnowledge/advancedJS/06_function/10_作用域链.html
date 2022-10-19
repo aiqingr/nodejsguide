@@ -1,0 +1,41 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /* 
+            作用域链：
+                1）当我们使用一个变量时
+                JS解释器会优先在当前作用域中寻找变量
+                    如果找到了则直接使用
+                    如果没有找到，则去上一层作用域总寻找依次类推
+                    如果都没有找到则报错XXX is not defined
+        */
+
+        let a = "No.1 var"
+
+        {
+            let a = "No.2 var"
+            {
+                console.log(a)
+            }
+        }
+
+        let b = 10
+
+        function fn1() {
+            let b = 20
+            function fn2() {
+                console.log(b)
+            }
+            fn2()
+        }
+        fn1()
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

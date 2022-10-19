@@ -1,0 +1,49 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /* 
+            递归
+                调用自身的函数称为递归
+                递归的作用和循环基本一致
+        */
+        // 函数 =》阶乘
+        /* 
+            编写递归函数要包括两个条件
+            1.基线条件
+            2.递归条件 - 如何对问题进行拆分
+            递归的作用和循环是一致的，递归的思路比较清晰简洁，循环的执行性能比较好
+            在开发中，一般情况可以直接通过循环解决，可以尽量去使用循环少用递归
+        */
+        function fn1(num) {
+            //基线条件
+            if(num === 1) {
+                return 1
+            }
+            return fn1(num-1) * num
+        }
+
+        console.log(fn1(3))
+
+        /* 
+            一对兔子出生后两个月，每个月都可以生一对小兔子
+        */
+
+        function fn2(num) {
+            if(num === 1 || num ===2) {
+                return 1
+            }
+            return fn2(num-1) + fn2(num-2)
+        }
+
+        let res2 = fn2(8)
+        console.log(res2)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

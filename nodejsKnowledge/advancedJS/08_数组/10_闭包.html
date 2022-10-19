@@ -1,0 +1,40 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        /* 
+            创建一个函数 第一次打印1 第二次打印2
+            可以利用函数来隐藏不希望外部访问的变量
+            闭包：
+            闭包就是可以访问到外部函数作用域中变量的函数
+            什么时候使用
+            当我们需要隐藏不想要被别人访问到的内容就可以使用闭包
+            构成闭包的必要条件
+            1.函数的嵌套
+            2.内部函数要引用外部函数中的变量
+            3.内部函数要作为返回值
+
+        */
+
+        function outer() {
+            let num = 0
+            return ()=>{
+                num++
+                console.log(num)
+            }
+        }
+        const newFunc = outer()
+        newFunc()
+        newFunc()
+        newFunc()
+        newFunc()
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

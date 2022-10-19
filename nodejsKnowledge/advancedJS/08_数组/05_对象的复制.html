@@ -1,0 +1,46 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /* 
+            复制必须出现一个新对象
+        */
+
+        const arr1 = ["a", "b", "c"]
+        const arr2 = arr1.slice()
+        console.log('arr2-->', arr2)
+        console.log(arr1 === arr2)
+
+        /* 
+            浅拷贝（shallow copy）
+                - 通常对象的copy都是浅拷贝
+                - 只对对象的浅层进行复制（只复制一层）
+                - 如果对象中存储的是原始值，那么拷贝的深浅不重要
+                - 浅拷贝只会对对象本身进行复制，不会复制对象中的属性（或元素）
+
+            深拷贝（deep copy）
+                - 深拷贝不仅复制对象本身，还会复制对象的属性
+                - 多数情况不会进行深拷贝
+        */
+
+        const arr3 = [{1:1,2:2}, 2,3,"a", [1,2,3]]
+        const arr4 = arr3.slice()
+        console.log('arr4', arr4)
+        console.log(arr3[0] === arr4[0])
+
+        const arr5 = structuredClone(arr3)
+        console.log('arr5', arr5)
+        console.log(arr3[0] === arr5[0])
+
+        /* 
+            structuredClone()
+        */
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

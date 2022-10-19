@@ -1,0 +1,35 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /* 
+            bind（）
+                可以用来创建一个新的函数
+                bind可以为我们新函数绑定this
+                bind可以为新函数绑定参数
+        */
+
+        /* 
+            箭头函数没有自身的this，他的this由外层作用域决定
+            也无法通过apply call bind更改
+            箭头函数也没有arguments
+        
+        */
+
+        function fn(a,b,c) {
+            console.log(a,b,c)
+            console.log("RUNNING", this)
+        }
+        const obj = {name: "sunwukong"}
+        fn.call()
+        const newFn = fn.bind(obj,10)
+        newFn(2,3,20)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

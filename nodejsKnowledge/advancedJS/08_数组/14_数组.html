@@ -1,0 +1,70 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /* 
+            sort()
+                - 用来对数组进行排序（会改变原数组）
+                sort会默认升序排列
+            forEach()
+                - 遍历数组
+                - 他需要一个回调函数作为参数，这个回调函数会被调用多次
+                每次调用都会将数组中的数据作为参数传递
+                - 回调函数有三个参数
+                    1）element当前元素
+                    2）index当前元素的索引
+                    3）array遍历的整个数组
+
+            filter()
+                - 将数组中符合条件的数组保存到另一个新的数组中返回
+                - 需要一个回调函数作为参数，
+                    会为每一个元素去调用回调函数并根据返回值决定是否添加到新的数组中
+                - 非破坏性的方法， 原数组不会受到影响
+
+            map()
+                - 根据当前数组生成一个新数组
+                - 需要一个回调函数作为参数，
+                    回调函数中的返回值会成为新数组的元素
+                - 非破坏性的方法， 原数组不会受到影响
+                
+            reduce(()=>{}, init) 
+                - 原来将整个数组整合的
+                - 两个参数
+                    1.回调函数，通过回调函数来指定指定制定整合规则
+                    2.可选参数， 初始值
+        */
+
+        let arr = ["b", "d", "c", "a"]
+        arr.sort()
+        console.log(arr)
+        arr = [10,2,3,4,5,1,7,8,9,6]
+        arr.sort((a,b)=>a-b)
+        console.log(arr)
+        arr = ["sunwukong", "zhubajie", "shaheshang"]
+        arr.forEach((element,index,array)=> {
+            console.log('aelement', element)
+            console.log('index', index)
+            console.log('array', array)
+        })
+        arr = [1,2,3,4,5,6,7,8,9]
+        let arr1 = arr.filter((a)=> a % 2 === 0)
+        console.log('arr1', arr1)
+
+        arr = [1,2,3,4,5,6,7,8,9]
+        let arr2 = arr.map(ele => ele*2)
+        console.log(arr2)
+
+        arr.reduce((a,b) => {
+            console.log(a,b)
+            return a + b
+        }, 10)
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

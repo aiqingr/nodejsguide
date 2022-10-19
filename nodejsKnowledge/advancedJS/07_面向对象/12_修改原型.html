@@ -1,0 +1,52 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /* 
+            大部分情况下是不需要修改原型对象
+            注意： 不要通过实例对象修改原型
+
+            除了通过(实例.__proto__)能访问对象的原型
+            还可以通过(类.prototype)来访问实例的原型
+
+            1.原型尽量不要改
+            2.改也不要通过实例的__proto__去改
+            3.改也尽量用类.prototype属性去改
+            4.最好不要直接给prototype赋值
+
+        */
+
+        class Person {
+            name = "sunwukong"
+            sayHello() {
+                console.log(this.name)
+            }
+        }
+
+        const p1 = new Person()
+        const p2 = new Person()
+
+        //通过对象修改方法，向原型中添加方法，修改后所有同类实例都可以访问该方法
+        //注意： 不要通过实例对象修改原型
+
+
+        p1.__proto__.run = () => {
+            console.log("RUNNING")
+        }
+
+        console.log(p1.__proto__ === Person.prototype)
+        Person.prototype.fly = () => {
+            console.log("I can fly")
+        }
+
+
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

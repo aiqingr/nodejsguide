@@ -1,0 +1,38 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        class Person {
+            constructor(name) {
+                this.name = name
+            }
+        }
+
+        class Dog {
+            constructor(name) {
+                this.name = name
+            }
+        }
+
+        const p1 = new Person("sunwukong")
+        const d1 = new Dog("xiaotianquan")
+
+        function fn(obj) {
+            console.log('name--->', obj.name)
+        }
+        /* 
+            定义一个函数，这个函数接收一个对象作为参数
+
+            多态：
+                在JS中不会检查参数的类型，所以这就意味着所有的数据类型都可以作为参数传递
+                要调用某个函数，无需指定类型，只要对象满足某些条件即可    
+            */
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
