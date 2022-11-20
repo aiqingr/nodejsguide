@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+            :root 表示页面中的根元素
+            :empty 表示页面中的空元素
+            :first-child 表示第一个子元素
+            :first-of-type 表示同类型中的第一个子元素
+            :last-child 表示最后一个子元素
+            :last-of-type 表示同类型中的最后一个子元素
+            :nth-child(x) 表示第x个元素 
+            :nth-last-child(x) 表示倒数第x个元素
+            :nth-of-type()
+            :nth-last-of-type()
+                x表示0～无穷大
+                2X（或者even）表示偶数 
+                2X+1（或者odd）表示奇数
+            :only-child 选中唯一的子元素
+            :only-of-type
+        */
+
+        /* :root {
+            background-color: lightblue;
+        } */
+        /* p:empty {
+            width: 100px;
+            height: 100px;
+            background-color: aqua;
+        }
+
+        p:first-child {
+            background-color: orange;
+        }
+        p:first-of-type {
+            background-color: aqua;
+        }
+
+        div>p:first-child {
+            background-color: blueviolet;
+        }
+
+        div>p:first-of-type {
+            background-color: lightgreen;
+        } */
+
+        span:only-child{
+            background-color: violet;
+        }
+
+        span:only-of-type{
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <p>emmmm</p>
+    <div>
+        <span>This is a div</span>
+        <p>This is first p in dev</p>
+        <p>This is second p in dev</p>
+        <p>This is third p in dev</p>
+    </div>
+    <p>This is first P</p>
+    <p>This is second P</p>
+    <p>This is third P</p>
+    <p>This is fourth P</p>
+    <p>This is fifth P</p>
+    <p></p>
+    <div>
+        <span>I am the only one</span>
+    </div>
+</body>
+</html>

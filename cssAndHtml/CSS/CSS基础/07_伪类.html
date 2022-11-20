@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+            伪类
+                - 伪类用来表示元素的特殊状态
+                - 比如：
+                    一个链接是否访问过
+                    一个按钮是否被点击
+                    鼠标是否移入到某个元素中
+                - 注意
+                    伪类选择器都是以：开头的
+
+                :link 
+                    没有访问过的超链接
+                :visited
+                    访问过的超链接
+                :hover
+                    鼠标移入
+                ：active
+                    鼠标点击的元素
+        */
+        a:visited {
+            color: orangered;
+        }
+        div:hover {
+            background-color: aqua;
+        }
+        a:active {
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <div>I am a div</div>
+    <a href="https://cn.bing.com/">BING</a>
+    <br>
+    <a href="123.456">UNKNOWN</a>
+</body>
+</html>

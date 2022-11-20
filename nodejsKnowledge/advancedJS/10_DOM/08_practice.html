@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .outer {
+            background-color: pink;
+            width: 700px;
+            margin: 50px auto;
+            text-align: center;
+        }
+    </style>
+    <script>
+        window.onload = function() {
+            /* 
+                点击按钮跳转图片
+            */
+
+            // 获取图片元素
+            const imgItem = document.getElementsByTagName("img")[0]
+
+            // 获取两个btn元素
+            const preBtn = document.getElementById("pre")
+            const nextBtn = document.getElementById("next")
+            // console.log('imgItem', imgItem)
+
+            // 获取p元素
+            const info = document.getElementById("info")
+
+            // 创建数组 保存数据
+            imgArr = [
+                "./img/1.webp",
+                "./img/2.webp",
+                "./img/3.webp",
+                "./img/4.webp"
+            ]
+
+            // 创建变量储存当前位置
+            let cur = 0
+
+            // 添加点击事件
+            nextBtn.onclick = function() {
+                cur++
+                if(cur > imgArr.length - 1) {
+                    cur = 0
+                }
+                imgItem.setAttribute("src", imgArr[cur])
+                info.innerText = `总共${imgArr.length}张图片，现在是第${cur+1}张`
+            }
+            preBtn.onclick = function() {
+                cur--
+                if(cur < 0 ) {
+                    cur = imgArr.length - 1
+                }
+                imgItem.src = imgArr[cur]
+                info.innerText = `总共${imgArr.length}张图片，现在是第${cur+1}张`
+            }
+
+        }
+    </script>
+</head>
+<body>
+    <div class="outer">
+        <p id="info">
+            总共4张图片，现在是第1张
+        </p>
+        <div class="img-wrapper">
+            <img src="./img/1.webp" alt="a pic">
+        </div>
+        <div class="btn-wrapper">
+            <button id="pre">Previous</button>
+            <button id="next">Next</button>
+        </div>
+    </div>
+</body>
+</html>

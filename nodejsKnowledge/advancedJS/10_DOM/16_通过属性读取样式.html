@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box1{
+            height: 200px;
+            width: 200px;
+            background-color: #bfa;
+            margin: 50px;
+            padding: 50px;
+            border: 10px red solid;
+        }
+    </style>
+</head>
+<body>
+    <button id="btn">Click me</button>
+    <div id="box1"></div>
+    <script>
+        const btn = document.getElementById("btn")
+        const box1 = document.getElementById("box1")
+        /* 
+            获取元素内部的高度宽度（内容区和内边距）
+            clientHeight
+            clientWidth
+            获取元素可见框的宽度高度
+        */
+        btn.onclick = () => {
+            console.log(box1.clientHeight)
+            console.log(box1.clientWidth)
+            console.log(box1.offsetHeight)
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!--
+ * @Author: Tongyang Ni ntyaiqingr@gmail.com
+ * @Date: 2022-11-06 15:58:35
+ * @LastEditors: Tongyang Ni ntyaiqingr@gmail.com
+ * @LastEditTime: 2022-11-06 17:41:05
+ * @FilePath: /nodejsguide/nodejsKnowledge/02_express/views/updates.ejs
+ * @Description: 
+ * 
+ * Copyright (c) 2022 by Tongyang Ni ntyaiqingr@gmail.com, All Rights Reserved. 
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Edit information</h2>
+    <form action="/update-student" method="post">
+        <input type="hidden" name="id" value="<%=stu.id%>">
+        <div>
+            <input type="text" name="name" placeholder="name" value="<%=stu.name%>">
+        </div>
+        <div>
+            <input type="number" name="age" placeholder="age" value="<%=stu.age%>">
+        </div>
+        <div>
+            <input type="radio" name="gender" value="male" placeholder="male" <%=stu.gender === "male" && "checked"%>>male
+            <input type="radio" name="gender" value="female" placeholder="female" <%=stu.gender === "female" && "checked"%>>female
+        </div>
+        <div>
+            <input type="text" name="address" placeholder="address" value="<%=stu.address%>">
+        </div>
+        <button>add</button>
+    </form>
+</body>
+</html>

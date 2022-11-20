@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>    
+        window.onload = function() {
+            const btn = document.getElementById("btn")
+            const list = document.getElementById("list")
+            btn.onclick = function() {
+                const li = document.createElement("li")
+                li.textContent = "tangseng"
+                li.id = "ts"
+                console.log(li)
+                // appendChild 用于给一个节点添加子节点
+                // list.appendChild(li)
+                // insertAdjacentElement 用于给一个节点任意位置添加子节点
+                list.insertAdjacentElement("beforeend", li)
+            }
+        }
+    </script>
+</head>
+<body>
+    <button id="btn">Add</button>
+    <br>
+    <ul id="list">
+        <li id="suk">sunwukong</li>
+        <li id="zbj">zhubajie</li>
+        <li id="shs">shaheshang</li>
+    </ul>
+</body>
+</html>

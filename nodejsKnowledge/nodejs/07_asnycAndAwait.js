@@ -1,3 +1,13 @@
+/*
+ * @Author: Tongyang Ni ntyaiqingr@gmail.com
+ * @Date: 2022-10-18 20:37:30
+ * @LastEditors: Tongyang Ni ntyaiqingr@gmail.com
+ * @LastEditTime: 2022-11-11 09:13:18
+ * @FilePath: /nodejsguide/nodejsKnowledge/nodejs/07_asnycAndAwait.js
+ * @Description: 
+ * 
+ * Copyright (c) 2022 by Tongyang Ni ntyaiqingr@gmail.com, All Rights Reserved. 
+ */
 /* 
     通过async可以快速的创建异步函数
         异步函数的返回值会自动封装到一个Promise中返回
@@ -32,7 +42,7 @@ function fn3() {
     sum(1,2)
         .then(r => sum(r,3))
         .then(r => sum(r,4))
-        .then(r => console.log(r))     
+        .then(r => console.log("r",r))     
 }
 
 async function fn4() {

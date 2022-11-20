@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+            当我们给一个元素设置样式的时候，其后代元素也会设置相同的设置
+            简化了CSS代码的编写
+            但并不是所有的样式都会继承
+            比如说布局相关的 背景相关的
+        */
+        p {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <p>
+        I am a paragraph
+        <span>I am a span</span>
+    </p>
+</body>
+</html>

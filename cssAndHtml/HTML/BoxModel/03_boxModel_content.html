@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box1{
+            /* 
+                一个盒子的最内部叫做内容区
+                一个元素的子元素 文本 图片之类的内容都位于内容区
+                内容区就是元素放东西的地方
+                内容区的大小决定了一个盒子可以放多少东西
+
+                默认情况下 width和height就是用来设置盒子内容区的大小
+
+                可见框
+                    元素的可见框是说 元素可以被直接看到的区域
+                    默认情况下 边框和内容区都会影响到可见框的大小
+            */
+            width: 200px;
+            height: 200px;
+            border: 20px red solid;
+            background-color: yellowgreen;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">I am box1</div>
+</body>
+</html>

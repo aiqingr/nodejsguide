@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box1{
+            width: 600px;
+            height: 400px;
+            border: 10px red solid;
+        }
+
+        .box2{
+            width: 200px;
+            height: 200px;
+            background-color: yellowgreen;
+            margin-top: 100px;
+            margin-left: auto;
+            margin-right: auto; 
+
+            /* 
+                外边距不会影响可见框的大小
+                    但他回影响盒子的实际大小
+
+                box2时box1子元素所以box2位于box1的内容区
+                子元素的实际宽度 = 父元素内容区的宽度
+                可见框的宽度 + 左右边距 = 600
+                200 + 左右外边距 = 600
+                当等式不满足的时候，浏览器回自动调整相应值使得等式满足
+
+                1) 如果width margin-left margin-right都有值的时候
+                    他会自动调整margin-right的数值以使得等式成立
+                    width(200) + margin-left(0) + margin-right(0) => 600
+                    width(200) + margin-left(0) + margin-right(400) = 600
+
+                2) 如果 width margin-left margin-right 中有auto的值
+                则会自动调整以使得等式满足
+                    width(200) + margin-left(auto) + margin-right(0) => 600
+                    width(200) + margin-left(400) + margin-right(0) = 600
+                    width(auto) + margin-left(0) + margin-right(0) => 600
+
+                3) 如果width时auto 左或者右边距也是auto 则为auto的外边距自动设置为0
+                    width(auto) + margin-left(auto) + margin-right(0) => 600
+                    width(600) + margin-left(0) + margin-right(0) => 600
+
+                4) 如果width有值 左右外边距都是auto 则浏览器会平分左右外边距
+                    以使得子元素在父元素中剧中
+                    我们经常使用这种手段 让一个元素在父元素中剧中
+                    
+
+            */
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box1">
+        <div class="box2"></div>
+    </div>
+</body>
+</html>

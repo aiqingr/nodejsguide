@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--  
+        表单form
+            表单用来将我们的用户信息提交给服务器
+
+        使用form标签来创建一个表单
+            属性：
+                1）action 指定表单提交的地址
+    -->
+    <form action="./02_表格.html">
+        <!-- 
+            文本框：
+                - 使用input标签创建一个文本框
+                - 它的type属性是text
+                如果希望表单中的数据可以提交到服务器
+                必须为表单项指定一个name属性
+        -->
+        Input: <input type="text" name="username">
+        <br>
+        <br>
+        <!-- 
+            密码框：
+                - 使用input来创建
+                - 它的type属性是password
+        -->
+        Password: <input type="password" name="password">
+        <br>
+        <br>
+        <!-- 
+            单选按钮
+                1）使用input来创建
+                它的type属性是radio
+                2）通过name属性来分组 
+                name相同则属于同一按钮
+                3）像这种不需要用户填写的选择框
+                必须添加一个value属性
+                value属性的值最终会传给服务器
+                4)可以通过checked属性来设置默认选项
+        -->
+        Gender: <input type="radio" name="gender" value="male" checked>Male
+        <input type="radio" name="gender" value="female">Female
+        <br>
+        <br>
+        <!-- 
+            多选按钮
+                1）使用input来创建
+                它的type属性是checkbox
+                2）通过name属性来分组 
+                name相同则属于同一按钮
+                3）像这种不需要用户填写的选择框
+                必须添加一个value属性
+                value属性的值最终会传给服务器
+                4)可以通过checked属性来设置默认选项
+        -->
+        Hobby: <input type="checkbox" name="hobby" value="football">Football
+        <input type="checkbox" name="hobby" value="baseball" checked>BaseBall
+        <input type="checkbox" name="hobby" value="swim">Swim
+        <input type="checkbox" name="hobby" value="lifting">Lifting
+        <br>
+        <br>
+        <!--  
+            下拉列表
+                使用select来创建一个下拉列表
+                在select中使用option来添加选项列表
+                下拉列表的name属性需要设置给select
+                value则需要设置给每一个option
+                selected默认选中
+        -->
+        Favorate: <select name="favorate" id="">
+            <option value="ye">ye</option>
+            <option selected value="xiao">xiao</option>
+            <option value="qing">qing</option>
+        </select>
+        <br>
+        <br>
+        <!-- 
+            提交按钮
+                - 可以用input标签创建按钮
+                - 它的type属性是submit
+                - 可以通过value属性修改按钮中的文字
+        -->
+        <input type="submit" value="SEND1">
+        <!-- 
+            reset
+        -->
+        <input type="reset">
+        <input type="button" value="button">
+        <!-- 
+            button也可以创建按钮
+            type也有三个值
+            submit reset 和button
+        -->
+        <button type="submit">SEND2</button>
+        <button type="reset">RESET2</button>
+        <button type="button">BUTTON2</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+            伪元素用来表示网页中的特殊位置
+                - 伪元素使用::开头
+            ::first-letter 第一个字母
+            ::first-line 第一行
+            ::selection 选中的位置
+            ::after 标签的结束位置
+            ::before 标签的开始位置
+        */
+        p::first-letter {
+            color: yellow;
+        }
+
+        div::before {
+            content: "ye";
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        I love you.
+    </div>
+    <p>
+        I love you, really
+    </p>
+</body>
+
+</html>

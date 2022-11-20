@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload = function() {
+            const list2 = document.getElementById("list2")
+            const l1 = document.getElementById("li1")
+            const btn = document.getElementById("btn")
+            btn.onclick = function() {
+                // 用来对节点进行复制
+                /* 
+                    使用cloneNode（）方法对节点进行复制的时候 他会复制节点的所有特点包括各种属性
+                    这个方法默认只会复制当前节点 而不会复制节点的子节点
+                    可以传递一个true作为参数 这个方法会将元素的子节点一起复制
+                */
+                const newL1 = l1.cloneNode(true)
+                newL1.id = "nli1"
+                list2.appendChild(newL1)
+            }
+        }
+    </script>
+</head>
+<body>
+    <button id="btn">Click me</button>
+    <ul id="list1">
+        <li id="li1">name1</li>
+        <li id="li2">name22</li>
+        <li id="li3">name333</li>
+        <li id="li4">name4444</li>
+    </ul>
+
+    <ul id="list2">
+        <li>name55555</li>
+    </ul>
+</body>
+</html>

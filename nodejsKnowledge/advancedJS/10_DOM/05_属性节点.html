@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" disabled class="input1" name="username" value="admin">
+    <script>
+        /* 
+            属性节点（attr）
+                - 在DOM中也是一个对象 通常不要获取对象而是直接通过元素即可完成对其的各种操作
+                - 如何操作属性节点
+                    方式一：
+                        读取：元素.属性名(class属性需要使用className来读取)
+                        读取一个boolean的时候 会返回true或者false
+                        修改：元素.属性名 = value
+
+                    方式二
+                        读取 元素.getAttribute(属性名)
+                        修改 元素.setAttribute(属性名,属性值)
+                        删除 元素.removeAttribute(属性名)
+
+        */
+        const input = document.querySelector("[name=username]")
+        console.log('input', input)
+        console.log(input.value)
+        console.log(input.className)
+        console.log(input.disabled)
+        // input.disabled = false
+        input.setAttribute("value", "admin123")
+        console.log('input.value', input.value)
+        input.removeAttribute("value")
+    </script>
+</body>
+</html>

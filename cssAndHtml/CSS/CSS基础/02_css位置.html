@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 
+        2.内部样式表
+            - 可以将样式编写在head中的style元素里
+            - 通过选择器可以为多个元素设置样式
+            - 减少CSS的代码量，方便后期的维护
+    -->
+
+    <style>
+        p {
+            color: brown;
+            font-size: large;
+        }
+    </style>
+
+    <!-- 
+        3.外部样式表
+        可以将css样式编写到外部的css文件中
+        然后通过link标签将外部的文件引入到当前页面中
+        外部的样式表可以在不同的页面中使用
+        并且将html和css分开是开发中的首选
+    -->
+    <link rel="stylesheet" href="./CSS/02_css.css">
+</head>
+<body>
+    <!-- 
+        1.内联样式 （行内样式）
+        将样式编写到style属性中
+        开发中不推荐此方法
+    -->
+    <h1>Hi, qianqian</h1>
+    <p style="font-size: 30px;color: blue;">I love you</p>
+    <p>Hi, long time no see</p>
+    <p>Hi, long time no see</p>
+    <p>Hi, long time no see</p>
+    <p>Hi, long time no see</p>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!--
+ * @Author: Tongyang Ni ntyaiqingr@gmail.com
+ * @Date: 2022-11-10 21:29:55
+ * @LastEditors: Tongyang Ni ntyaiqingr@gmail.com
+ * @LastEditTime: 2022-11-10 21:33:23
+ * @FilePath: /nodejsguide/cssAndHtml/CSS练习/骰子两点.html
+ * @Description: 
+ * 
+ * Copyright (c) 2022 by Tongyang Ni ntyaiqingr@gmail.com, All Rights Reserved. 
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .warp{
+
+            height: 300px;
+            width: 300px;
+            background-color: #eee;
+            border-radius: 30px;
+            box-shadow: 0 0 10px grey;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .column {
+            display: flex;
+        }
+
+        .column:nth-child(2) {
+            justify-content: flex-end;
+        }
+
+        .pip{
+            margin: 20px 20px;
+            width: 0;
+            height: 0;
+            border: 40px black solid;
+            border-radius: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="warp">
+        <div class="column">
+            <div class="pip"></div>
+        </div>
+        <div class="column">
+            <div class="pip"></div>
+        </div>
+    </div>
+
+</body>
+
+</html>

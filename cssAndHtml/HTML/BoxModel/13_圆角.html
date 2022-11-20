@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+            border-radius
+                - 该属性用来设置圆角
+                - 指定的是圆角的半径，半径越大弧度越大
+                - 当值是可见框的一半的时候，且可见框是一个正方形
+                我们得到一个圆
+            规则和border类似
+                左上 右上 右下 左下（借对角的大小）
+
+            可以分别指定圆角的横向半径和纵向半径
+
+            还有四个
+            border-top-right-radius
+            border-top-left-radius
+            border-bottom-left-radius
+            border-bottom-right-radius
+        */
+
+        /* 
+            outline原来设置元素的轮框
+            设置方式和border类似
+            不同点是border是可见框的一部分会影响页面的布局
+            轮廓不属于可见框 轮廓不会影响页面的布局
+        */
+        .box1{
+            width: 200px;
+            height: 200px;
+            border: 10px red solid;
+            background-color: orange;
+            border-radius: 20px / 40px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+</body>
+</html>

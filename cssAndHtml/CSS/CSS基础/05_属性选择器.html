@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+            属性选择器
+                - 作用可以根据元素的属性选中页面中的元素
+                [属性名]
+                    - 选中具有某个属性的元素
+                [属性名=属性值]
+                    - 选中属性值为指定值的元素
+                [属性名*=属性值]
+                    - 选中属性值含有指定内容的元素
+                [属性名^=属性值]
+                    - 选中属性值以指定内容开始的元素
+                [属性名¥=属性值]
+                    - 选中属性值以指定内容结束的元素
+        */
+        div[title]{
+            color: aqua;
+        }
+        a[href="www.bing.com"] {
+            font-size: 40px;
+        }
+        div[title^="a"] {
+            background-color: blue;
+        }
+        div[title$="c"]{
+            background-color: yellow;
+        }
+        [title*="12"]{
+            background-color: red;
+        }
+        
+    </style>
+</head>
+<body>
+    <div title="bc">I love you</div>
+    <div title="abcd">I love you</div>
+    <div>I am a div</div>
+    <a href="www.bing.com">bing</a>
+    <a href="www.baidu.com">baidu</a>
+    <p title="ab12cd">I am a paragraph</p>
+</body>
+</html>

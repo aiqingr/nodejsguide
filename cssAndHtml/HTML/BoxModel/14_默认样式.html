@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+            浏览器在渲染网页的时候 会对元素添加一些默认样式
+            但是这些样式对于我们现在的开发有影响
+            所以在开发前需要去掉默认样式
+        */
+        /* 
+            方式一
+        */
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        ul{
+            list-style: none;
+        }
+
+        /* 
+            方式二 引入reset.css(前辈们写的)
+        */
+    </style>
+</head>
+<body>
+    <div>I am a box</div>
+    <p>I am a p</p>
+    <ul>
+        <li>I am a li</li>
+        <li>I am a li</li>
+        <li>I am a li</li>
+    </ul>
+</body>
+</html>

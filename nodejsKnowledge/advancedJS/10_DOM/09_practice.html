@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload = function () {
+            /* 
+                全选
+                取消
+                反选
+                提交
+                小checkbox和大checkbox同步
+            */
+
+            // 全选
+            const btnAll = document.getElementById("all")
+            const btnNo = document.getElementById("no")
+            const btnReverse = document.getElementById("reverse")
+            const btnSend = document.getElementById("send")
+            const hobbies = document.getElementsByName("hobby")
+
+
+            btnAll.onclick = function () {
+                for (let i = 0; i < hobbies.length; i++) {
+                    hobbies[i].checked = true
+                }
+                boxCheckedAll.checked = true
+            }
+
+            btnNo.onclick = function () {
+                for (let i = 0; i < hobbies.length; i++) {
+                    hobbies[i].checked = false
+                }
+                boxCheckedAll.checked = false
+            }
+
+            btnReverse.onclick = function () {
+                for (let i = 0; i < hobbies.length; i++) {
+                    hobbies[i].checked = !hobbies[i].checked
+                }
+                const checkedBox = document.querySelectorAll("[name=hobby]:checked")
+                if (hobbies.length === checkedBox.length) {
+                    boxCheckedAll.checked = true
+                } else {
+                    boxCheckedAll.checked = false
+                }
+
+
+            }
+
+            /* 
+                提交按钮
+            */
+
+            btnSend.onclick = function () {
+                for (let i = 0; i < hobbies.length; i++) {
+                    if (hobbies[i].checked) {
+                        alert(hobbies[i].value)
+                    }
+                }
+            }
+            /* 
+                Select All 选中 options全选
+            */
+
+            const boxCheckedAll = document.getElementById("checked-all")
+            boxCheckedAll.onchange = function () {
+                console.log("running")
+                for (let i = 0; i < hobbies.length; i++) {
+                    hobbies[i].checked = this.checked
+                }
+            }
+            /* 
+                使得Checkedbox和四个options联动
+                如果四个都选择了 那么checkedbox也要选择
+                有一个取消了 那么checkedbox也要取消
+            */
+
+            for (let i = 0; i < hobbies.length; i++) {
+                hobbies[i].onchange = function () {
+                    const checkedBox = document.querySelectorAll("[name=hobby]:checked")
+                    if (hobbies.length === checkedBox.length) {
+                        boxCheckedAll.checked = true
+                    } else {
+                        boxCheckedAll.checked = false
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div>
+        <form action="#">
+            <div>
+                Please select your hobbies
+                <input type="checkbox" id="checked-all" /> Select All
+            </div>
+            <div>
+                <input type="checkbox" name="hobby" value="table tennis">Table tennis
+                <input type="checkbox" name="hobby" value="basketball">basketball
+                <input type="checkbox" name="hobby" value="swim">Swim
+                <input type="checkbox" name="hobby" value="boxing">Boxing
+            </div>
+            <div>
+                <button type="button" id="all">Select all</button>
+                <button type="button" id="no">Select nothing</button>
+                <button type="button" id="reverse">Reverse</button>
+                <button type="button" id="send">Send</button>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

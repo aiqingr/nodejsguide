@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+            border-width 用来设置边框的宽度
+            1）如果指定四个值 则分别为 上 右 下 左
+            2）如果指定三个值 则分别为 上 左右 下
+            3）如果指定两个值 则分别为 上下 左右
+            4）如果指定一个值 则四个边一样
+
+            除了border-width外
+            还有四个 border-XXX-width
+            xxx可以是top left bottom right
+            border-color border-style 也是一样的规则
+        */
+
+        .box {
+            background-color: #bfa;
+            width: 200px;
+            height: 200px;
+            /* 
+                设置元素的边框 需要设置三个样式
+                border-width 边框的宽度
+                border-color 边框的颜色
+                border-style 边框的样式
+            */            
+            /* border-width: 10px;
+            border-color: red;
+            border-style: double; */
+            /* 
+                简写属性 border
+                    可以同时设置四个边框的 宽度 颜色 和样式
+                同时也有四个border-xxx
+                border-top
+                border-left
+                border-right
+                border-buttom
+            */
+
+            border: blue 10px solid;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">I am a div</div>
+</body>
+
+</html>

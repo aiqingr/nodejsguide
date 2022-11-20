@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn">Click me</button>
+    <a href="#"></a>
+    <a href="https://www.bing.com"></a>
+    <script>
+        /* 
+            要使用DOM来操作网页，我们需要浏览器至少给我们一个对象
+            才能去完成各种操作
+
+            所以浏览器已经为我们提供了一个document对象，它是一个全局变量可以直接使用
+            document代表的就是整个网页
+        */
+
+        /* 
+            document对象
+                document对象表示的就是整个网页
+                document的原型链
+                HTMLDocument => Document => Node =>EventTarget=>Object.prototype=>null
+
+            凡是在原型链上存在的对象的属性和方法都可以通过document去调用
+
+            部分属性
+            document.documentElement -->html 根元素
+            document.head --> head元素
+            document.links --> 获取页面上所有的超链接
+        */
+
+        console.log(document)
+        let btn = document.getElementById("btn")
+        const links = document.links
+        console.log(links)
+        btn.innerHTML = "Hellow world"
+
+    </script>
+</body>
+</html>

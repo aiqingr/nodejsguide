@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* 
+            网页是自上而下的执行顺序，如果将js代码编写在网页的上边
+            js代码在执行的时候网页还没有加载完毕这时候会出现无法获取DOM对象的情况
+
+            window.onload事件会在窗口内容加载完毕后出现（iframe内联网页出现）
+            document中的DOMCurrentLoaded事件会在当前文档加载完毕后触发
+
+            如何解决这个问题：
+                1）将script标签写在body的末尾（最早）
+                2）将代码写在window.onload的回调函数中
+                3）将代码写在document.DOMCurrentLoaded的回调函数中（执行的更早）
+                4）将代码写在外部的，然后以defer的形式引入（执行的更早更早）
+
+        */
+
+    </script>
+</body>
+</html>

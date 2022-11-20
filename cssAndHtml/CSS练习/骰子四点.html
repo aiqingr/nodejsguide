@@ -1,0 +1,58 @@
+<!--
+ * @Author: Tongyang Ni ntyaiqingr@gmail.com
+ * @Date: 2022-11-10 22:07:38
+ * @LastEditors: Tongyang Ni ntyaiqingr@gmail.com
+ * @LastEditTime: 2022-11-10 22:18:43
+ * @FilePath: /nodejsguide/cssAndHtml/CSS练习/骰子四点.html
+ * @Description: 
+ * 
+ * Copyright (c) 2022 by Tongyang Ni ntyaiqingr@gmail.com, All Rights Reserved. 
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wrap{
+            width: 400px;
+            height: 400px;
+            background-color: #eee;
+            border: 1px none grey;
+            display: flex;
+            box-shadow: 0 0 20px grey;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .column{
+            margin: 20px;
+            display: flex;
+            justify-content: space-between;
+            /* margin: 20px 20px 180px 20px; */
+        }
+
+
+        .pip{
+            height: 0;
+            width: 0;
+            border: 40px solid black;
+            border-radius: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="column">
+            <div class="pip"></div>
+            <div class="pip"></div>
+        </div>
+        <div class="column">
+            <div class="pip"></div>
+            <div class="pip"></div>
+        </div>
+    </div>
+</body>
+</html>

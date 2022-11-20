@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>盒子模型</title>
+    <style>
+        .box{
+            background-color: #bfa;
+            width: 200px;
+            height: 200px;
+            /* 
+                设置元素的边框 需要设置三个样式
+                border-width 边框的宽度
+                border-color 边框的颜色
+                border-style 边框的样式
+            */
+            border-color: red;
+            border-width: 10px;
+            border-style: solid;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        网页的布局就是将元素摆放到页面不同的位置
+        在对网页布局前，需要先确定好元素的大小
+            要确定元素的大小就要先确定元素的形状
+        盒子模型（box model）
+            在网页中每一个元素都被设计成了一个矩形
+            每一个矩形都有以下几个部分组成
+            1）内容区 content
+            2）内边距 padding
+            3）边框 border
+            4）外边距 margin
+    -->
+    <div class="box">I am a div</div>
+</body>
+</html>

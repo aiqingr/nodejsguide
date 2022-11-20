@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+            border: 10px red solid;
+            /* 
+                内边距
+                    - 内容区 和边框之间的距离成为内边距
+                    默认情况下内边距会影响到盒子可见框的大小
+                    一共有四个方向的内边距
+                        padding-top
+                        padding-left
+                        padding-right
+                        padding-bottom
+                    一个元素的可见框的大小，由内容区 内边距 和边框共同决定
+
+                    简写属性
+                    padding
+                    规则和border-width一样
+            */
+            padding-top: 100px;
+        }
+
+        .box2{
+            height: auto;
+            width: auto;
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        I am a div
+        <div class="box2">I am a inside box</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+            box-sizeing
+                - 用来指定盒子模型的计算方式
+                - 默认值content-box width 和height 用来设置内容区的大小
+                - 可选值
+                设置改值以后 width和height将被用来设置盒子可见框的大小
+                设置border-box后， 将无法设置内容区的大小
+                    内容区的大小会根据边框和内边距自动调整
+        */
+        .box1{
+            box-sizing: content-box;
+            width: 100px;
+            height: 100px;
+            background-color: yellowgreen;
+            border: 20px red solid;
+        }
+        .box2{
+            box-sizing: border-box;
+            width: 100px;
+            height: 100px;
+            background-color: yellowgreen;
+            border: 20px red solid;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+
+    <div class="box2"></div>
+</body>
+</html>

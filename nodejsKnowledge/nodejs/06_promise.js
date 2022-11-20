@@ -1,3 +1,13 @@
+/*
+ * @Author: Tongyang Ni ntyaiqingr@gmail.com
+ * @Date: 2022-10-14 22:38:24
+ * @LastEditors: Tongyang Ni ntyaiqingr@gmail.com
+ * @LastEditTime: 2022-11-11 09:15:13
+ * @FilePath: /nodejsguide/nodejsKnowledge/nodejs/06_promise.js
+ * @Description: 
+ * 
+ * Copyright (c) 2022 by Tongyang Ni ntyaiqingr@gmail.com, All Rights Reserved. 
+ */
 // 开启一个定时器
 // 定时器的作用就是间隔一段时间后，将函数放入到任务队列中
 
@@ -46,6 +56,8 @@
     queueMicrotask()用来向微任务队列中添加一个任务
 
 */
+
+//  2-6-1-3
 setTimeout(()=>{
     Promise.resolve(1).then(()=>{
         console.log(3)

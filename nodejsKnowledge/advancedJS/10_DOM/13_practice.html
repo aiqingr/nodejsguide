@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .outer {
+            width: 400px;
+            margin: 100px auto;
+            text-align: center;
+        }
+
+        table {
+            width: 400px;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        td,
+        th {
+            border: 1px black solid;
+            padding: 10px 0;
+        }
+
+        form div {
+            margin: 10px 0;
+        }
+    </style>
+
+    <script>
+        window.addEventListener("load", function () {
+            function delEmpHandler() {
+                const tr = this.parentNode.parentNode
+                const empName = tr.firstElementChild.textContent
+                const flag = confirm(`Are you sure to delete ${empName}`)
+                if (flag) {
+                    tr.remove()
+                }
+
+            }
+
+            const deleteList = document.getElementsByTagName("a")
+            // const deleteList = document.links
+            console.log(deleteList)
+            for (let i = 0; i < deleteList.length; i++) {
+                deleteList[i].onclick = delEmpHandler
+            }
+
+            const btn = document.getElementById("btn")
+            const tbody = document.querySelector("tbody")
+            btn.onclick = function () {
+                /* 
+                    阻止默认行为
+                    1） return false
+                    2） 添加type="button" in button element
+                */
+                const inputName = document.getElementById("name").value
+                const inputEmail = document.getElementById("email").value
+                const inputSalary = document.getElementById("salary").value
+                console.log(`${inputName} - ${inputEmail} - ${inputSalary}`)
+                const tr = document.createElement("tr")
+                const nameTd = document.createElement(td)
+                const emailTd = document.createElement(td)
+                const salaryTd = document.createElement(td)
+
+                nameTd.textContent = inputName
+                emailTd.textContent = inputEmail
+                salaryTd.textContent = inputSalary
+                tr.appendChild(nameTd)
+                tr.appendChild(emailTd)
+                tr.appendChild(salaryTd)
+                tr.insertAdjacentHTML("beforeend", '<td><a href="javascipt:;">delete</a></td>')
+                tbody.appendChild(tr)
+                deleteList[deleteList.length - 1].onclick = delEmpHandler
+            }
+            
+            // deleteList[deleteList.length - 1].onclick = delEmpHandler
+        })
+
+    </script>
+</head>
+
+<body>
+    <div class="outer">
+        <table>
+            <tbody>
+                <tr>
+                    <th>name</th>
+                    <th>email</th>
+                    <th>salary</th>
+                    <th>action</th>
+                </tr>
+                <tr>
+                    <td>Amy</td>
+                    <td>amy@123.com</td>
+                    <td>100,000</td>
+                    <td><a href="javascipt:;">delete</a></td>
+                </tr>
+                <tr>
+                    <td>Nick</td>
+                    <td>nick@123.com</td>
+                    <td>300,000</td>
+                    <td><a href="javascipt:;">delete</a></td>
+                </tr>
+                <tr>
+                    <td>Peter</td>
+                    <td>peter@123.com</td>
+                    <td>500,000</td>
+                    <td><a href="javascipt:;">delete</a></td>
+                </tr>
+            </tbody>
+        </table>
+        <form action="#">
+            <div>
+                <label for="name">name</label>
+                <input type="text" id="name">
+            </div>
+            <div>
+                <label for="email">email</label>
+                <input type="email" id="email">
+            </div>
+            <div>
+                <label for="salary">salary</label>
+                <input type="text" id="salary">
+            </div>
+            <button id="btn" type="button">Add</button>
+        </form>
+    </div>
+</body>
+
+</html>

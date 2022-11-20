@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box1{
+            width: 200px;
+            height: 200px;
+            background-color: yellowgreen;
+            overflow: visible;
+        }
+        /* 
+            子元素在父元素的内容区中
+                如果子元素的大小超过父元素，会导致子元素从父元素中溢出
+                可以通过overflow来设置父元素如果处理溢出
+
+                可选值: 
+                    visible 默认值 不对溢出的内容做任何处理 直接在父元素处显示
+                    hidden 裁剪溢出内容不予以显示
+                    scroll 生成垂直和水平双向滚动条
+                    auto 根据需要生成滚动条
+        */
+        .box2{
+            width: 100px;
+            height: 400px;
+            background-color: red;
+            margin: auto;
+        }
+        /* 
+            display
+                - 可以用来设置元素的类型
+                - 可选值
+                    - none 元素在网页中不现实
+                    - inline 元素显示成行内元素
+                    - block 元素显示成块元素
+                    - inline-block 元素显示成行内块元素
+                    既不会独占一行 也可以设置宽度和高度
+                    - table 元素具有table标签的特别
+                    - flow-root元素会有html根元素的特点
+
+            visibility
+                - 可以用来设置元素的可见性
+                - 可选值
+                    visible 默认值 元素在页面中正常显示
+                    hidden 元素在页面中隐藏， 依然会占据网页的位置
+        */
+        a{
+            height: 100px;
+            width: 100px;
+            background-color: orange;
+            display: block;
+            visibility: hidden;
+        }
+
+        div{
+            height: 200px;
+            width: 200px;
+            background-color: pink;
+        }
+
+        /* div:hover a{
+            display: block;
+        } */
+    </style>
+</head>
+<body>
+    <div>
+        I am a div
+        <a href="#">I am a link</a>
+    </div>
+
+    <a href="#">I am a link</a>
+
+    <div class="box1">
+        <div class="box2"></div>
+    </div>
+</body>
+</html>

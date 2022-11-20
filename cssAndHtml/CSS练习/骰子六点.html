@@ -1,0 +1,60 @@
+<!--
+ * @Author: Tongyang Ni ntyaiqingr@gmail.com
+ * @Date: 2022-11-10 22:39:54
+ * @LastEditors: Tongyang Ni ntyaiqingr@gmail.com
+ * @LastEditTime: 2022-11-10 22:43:03
+ * @FilePath: /nodejsguide/cssAndHtml/CSS练习/骰子六点.html
+ * @Description: 
+ * 
+ * Copyright (c) 2022 by Tongyang Ni ntyaiqingr@gmail.com, All Rights Reserved. 
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wrap {
+            height: 400px;
+            width: 400px;
+            border: 1px none grey;
+            border-radius: 30px;
+            background-color: #eee;
+            box-shadow: 0 0 20px grey;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+
+        .column {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .pip{
+            width: 0;
+            height: 0;
+            border: 40px solid black;
+            border-radius: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="column">
+            <div class="pip"></div>
+            <div class="pip"></div>
+        </div>
+        <div class="column">
+            <div class="pip"></div>
+            <div class="pip"></div>
+        </div>
+        <div class="column">
+            <div class="pip"></div>
+            <div class="pip"></div>
+        </div>
+    </div>
+</body>
+</html>

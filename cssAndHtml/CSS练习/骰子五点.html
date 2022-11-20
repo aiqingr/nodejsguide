@@ -1,0 +1,65 @@
+<!--
+ * @Author: Tongyang Ni ntyaiqingr@gmail.com
+ * @Date: 2022-11-10 22:29:16
+ * @LastEditors: Tongyang Ni ntyaiqingr@gmail.com
+ * @LastEditTime: 2022-11-10 22:39:11
+ * @FilePath: /nodejsguide/cssAndHtml/CSS练习/骰子五点.html
+ * @Description: 
+ * 
+ * Copyright (c) 2022 by Tongyang Ni ntyaiqingr@gmail.com, All Rights Reserved. 
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wrap{
+            width: 400px;
+            height: 400px;
+            border: 1px none #eee;
+            border-radius: 40px;
+            box-shadow: 0 0 20px gray;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            background-color: #eee;
+        }
+
+        .column {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .column:nth-child(2) {
+            justify-content: center;
+        }
+
+        .pip {
+            margin: 20px;
+            height: 0;
+            width: 0;
+            border: 40px solid black;
+            border-radius: 100%;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="column">
+            <div class="pip"></div>
+            <div class="pip"></div>
+        </div>
+        <div class="column">
+            <div class="pip"></div>
+        </div>
+        <div class="column">
+            <div class="pip"></div>
+            <div class="pip"></div>
+        </div>
+    </div>
+</body>
+</html>

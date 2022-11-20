@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        表格
+            在网页中使用table标签来创建表格
+            表格的行数由tr的数量决定
+            表格的列数由td最多的tr来决定
+            在网页中表格主要是用来显示一些结构化的数据
+                课程表
+                对账单
+                报价单
+    -->
+
+    <table border="1">
+        <!--  
+            在table中使用tr来表示表格中的一行
+        -->
+        <tr>
+            <!-- 
+                在tr中使用td表示表格中的单元格
+            -->
+            <td>A1</td>
+            <td>A2</td>
+            <td>A3</td>
+        </tr>
+        <tr>
+            <td>B1</td>
+            <td rowspan="2">B2</td>
+            <td>B3</td>
+        </tr>
+        <tr>
+            <td>C1</td>
+            <td>C2</td>
+            <!-- rowspan纵向合并单元格 -->
+            <td>C3</td>
+        </tr>
+        <tr>
+            <td>D1</td>
+            <td>D2</td>
+            <!-- colspan横向合并单元格 -->
+            <td colspan="2">D3</td>
+        </tr>
+    </table>
+    <hr>
+    <!-- 长表格 -->
+    <table border="1">
+        <tr>
+            <td>id</td>
+            <td>name</td>
+            <td>age</td>
+            <td>gender</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Nick</td>
+            <td>30</td>
+            <td>Male</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Tim</td>
+            <td>20</td>
+            <td>Male</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Amy</td>
+            <td>10</td>
+            <td>Female</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td>Total</td>
+            <td>Three</td>
+        </tr>
+    </table>
+    <!-- 
+        thead 表示表格的头部 用来放头部的tr
+        tbody 表示表格的主要内容
+        tfoot 表示表格的底部
+        th 表示的是头部的单元格
+        caption 设置表格的title
+    -->
+    <caption>Student</caption>
+    <table border="1">
+        <thead>
+            <tr>
+                <td>id</td>
+                <td>name</td>
+                <td>age</td>
+                <td>gender</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Nick</td>
+                <td>30</td>
+                <td>Male</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Tim</td>
+                <td>20</td>
+                <td>Male</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Amy</td>
+                <td>10</td>
+                <td>Female</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td></td>
+                <td></td>
+                <td>Total</td>
+                <td>Three</td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>

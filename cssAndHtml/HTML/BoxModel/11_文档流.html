@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            background-color: #bfa;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        文档流 normal flow
+            - 文档流就是网页中的位置，文档流就是网页的最基层
+            - 我们所创建的元素默认都是位于文档流中
+            - 文档流中的元素会具有以下的特点
+                1） 块元素
+                    1.块元素在文档流中自上而下的垂直排列
+                    2.块元素在文档流中默认宽度时父元素的全部（值是auto）
+                    3.块元素在文档流中高度是被内容撑开
+
+                2）行内元素
+                    1.行内元素在文档流中自左向右水平排列
+                        如果一行内不足以容纳所有的行内元素
+                        则会另起一行继续自左向右水平排列
+                    2.行内元素在文档流中的默认高度宽度都是被内容撑开
+    -->
+
+    <span>I am span</span>
+    <div>I am div</div>
+    <span>I am a new span</span>
+</body>
+</html>
